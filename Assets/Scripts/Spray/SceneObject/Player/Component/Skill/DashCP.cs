@@ -1,4 +1,5 @@
 using BF;
+using BF.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,8 @@ namespace Spray
                 StartCoroutine("Dashing");
             else
             {
+                if ((data as PlayerData).mass.Value < massLimit)
+                    (UIManager.Instance().GetPanel("Condition") as UI_ExhibitMass).ShowShortage();
                 this.vector = vector;
                 skillLastInvokeTime = Time.time;
             }

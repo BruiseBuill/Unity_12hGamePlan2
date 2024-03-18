@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
-  damage: 7
+  damage: 4
   speed: 7
   model: {fileID: 3175023383134298197}
   isAlive: 0

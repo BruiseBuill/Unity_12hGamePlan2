@@ -2,7 +2,6 @@ using BF;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace Spray
@@ -21,6 +20,7 @@ namespace Spray
         [SerializeField] int bumpDamage;
 
         [SerializeField] float shakeDuration;
+        [SerializeField] float shakeStrength;
 
         public void Open()
         {
@@ -62,7 +62,7 @@ namespace Spray
         {
             if((data as PlayerData).isUnmatched.Value)
             {
-                Camera.main.DOShakePosition(shakeDuration);
+                Camera.main.DOShakePosition(shakeDuration, shakeStrength);
             }
             if(!(data as PlayerData).isUnmatched.Value && collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {

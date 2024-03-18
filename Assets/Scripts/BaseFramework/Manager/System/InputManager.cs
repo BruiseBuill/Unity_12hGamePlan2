@@ -144,7 +144,7 @@ namespace BF
             else if (Input.GetMouseButtonUp(0) && isPressValid)
             {
                 isPressValid = false;
-                //onMouseUp.Invoke(Input.mousePosition, Time.time - lastPressTime);
+                
                 if ((lastPressPoint - Input.mousePosition).sqrMagnitude < sqrDragOffset)
                 {
                     if (isDrag)
@@ -190,7 +190,6 @@ namespace BF
                     if (isLongPress)
                     {
                         isLongPress = false;
-                        //onLongPressEnd.Invoke(Input.mousePosition, Time.time - lastPressTime);
                     }
                 }
                 else if (Time.time - lastPressTime > minLongPressTime && !isDrag)

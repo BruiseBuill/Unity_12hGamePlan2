@@ -15,16 +15,17 @@ namespace Spray
         }
         public override void OnMassChange(int mass)
         {
-            if (mass < minMass)
+            if (mass <= minMass)
             {
                 data.isAlive.Value = false;
             }
         }
         public void BeHit(int damage)
         {
-            if(!(data as PlayerData).isUnmatched.Value)
+            var playerData = (data as PlayerData);
+            if (!playerData.isUnmatched.Value)
             {
-                (data as PlayerData).mass.Value -= damage;
+                playerData.mass.Value = Mathf.Max(playerData.mass.Value - damage, 0);
             }
         }
         public override void Close()

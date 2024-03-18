@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 1.5
   damage: 4
-  speed: 4
+  speed: 4.5
   model: {fileID: 7249972118988337092}
   isAlive: 0
 --- !u!114 &4957152977592034175
@@ -125,7 +125,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 1, y: 2}
   m_Direction: 0
 --- !u!212 &6258478552179496618
 SpriteRenderer:

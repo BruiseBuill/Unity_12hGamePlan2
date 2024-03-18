@@ -165,13 +165,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  multipleA: 380
-  multipleB: 90
+  multipleA: 220
+  multipleB: 45
   orient: {x: 0, y: 0, z: 0}
   rb: {fileID: 8620854689331291303}
   speedMultiple: 0
   bumpDamage: 2
-  shakeDuration: 0.3
+  shakeDuration: 0.4
+  shakeStrength: 15
 --- !u!120 &1678147069027506230
 LineRenderer:
   serializedVersion: 2
@@ -306,7 +307,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2ccdda88db7139d44bcfd4424987992f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,7 +328,7 @@ TrailRenderer:
   m_SortingLayerID: 1357773013
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.4
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -336,8 +337,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.12371415
+        time: 0.017093658
+        value: 0.7216527
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -345,7 +346,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.92820513
+        time: 1
         value: 0
         inSlope: -0.32895967
         outSlope: -0.32895967
@@ -493,8 +494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multipleA: 2
-  multipleB: 0.15
-  multipleC: 0.1
+  multipleB: 0.14
+  multipleC: 0.15
   mass: 0
   unmathchedColor:
     serializedVersion: 2
@@ -549,7 +550,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   lineLength: 2.5
   bulletPrefab: {fileID: 3476628223099972096, guid: 18fbe0089da816543bf60ac9d2a53b2f, type: 3}
-  consumePerBullet: 3
+  consumePerBullet: 2
 --- !u!114 &3044753653398747145
 MonoBehaviour:
   m_ObjectHideFlags: 0
